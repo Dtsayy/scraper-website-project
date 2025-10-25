@@ -1,5 +1,4 @@
 
-````markdown
 # 🕷️ Scraper Website Project  
 **Distributed Web Crawler using Scrapy + Redis + PostgreSQL**
 
@@ -17,7 +16,7 @@ It is designed for **massive data crawling**, **centralized control**, and **par
 ## ⚙️ Tech Stack
 
 | Layer | Technology | Purpose |
-|--------|-------------|----------|
+| :---- | :---------- | :------- |
 | **Crawler Framework** | [Scrapy](https://scrapy.org) | Core crawling engine |
 | **Distributed Queue** | [Redis](https://redis.io) | Centralized task queue for worker nodes |
 | **Data Storage** | [PostgreSQL](https://www.postgresql.org/) | Metadata & structured data storage |
@@ -36,39 +35,39 @@ It is designed for **massive data crawling**, **centralized control**, and **par
 vendor_scraper/
 │
 ├── vendor_scraper/
-│   ├── configs/                         # Cấu hình đầu vào
-│   │   ├── DOM_site.json                # Selector mapping cho từng website
-│   │   └── list_user_agents.txt         # Danh sách user-agents thủ công (tùy chọn)
+│   ├── configs/                         # Input configurations
+│   │   ├── DOM_site.json                # Selector mapping per website
+│   │   └── list_user_agents.txt         # Optional list of user agents
 │   │
-│   ├── dataflow/                        # Các module thực thi theo luồng dữ liệu
+│   ├── dataflow/
 │   │   ├── load/
-│   │   │   ├── add_url_to_pool.py       # Thêm URL vào Redis (start_urls)
-│   │   │   └── load_metadata_to_db.py   # Ghi metadata từ Redis vào PostgreSQL
+│   │   │   ├── add_url_to_pool.py       # Add URLs to Redis (start_urls)
+│   │   │   └── load_metadata_to_db.py   # Write metadata from Redis to PostgreSQL
 │   │   │
 │   │   ├── parse/
-│   │   │   └── parse_html_crawl.ipynb   # Notebook dùng để kiểm tra HTML & debug
+│   │   │   └── parse_html_crawl.ipynb   # Debug and verify HTML parsing
 │   │   │
 │   │   └── process/
-│   │       └── download_img.py          # Tải hình ảnh sản phẩm từ HTML
+│   │       └── download_img.py          # Download product images
 │   │
-│   ├── middlewares/                     # Middleware chia theo chức năng
-│   │   ├── base.py                      # Middleware mặc định (Scrapy template)
+│   ├── middlewares/
+│   │   ├── base.py                      # Default Scrapy middleware
 │   │   ├── browser_headers_middleware.py # Fake browser headers (ScrapeOps)
 │   │   ├── proxy_middleware.py          # Proxy rotation handler
 │   │   └── user_agent_middleware.py     # Fake User-Agent rotation
 │   │
 │   ├── spiders/
-│   │   ├── distributed-worker.py        # Spider phân tán dùng Redis (Scrapy-Redis)
-│   │   └── playwright_worker.py         # Spider dùng Playwright (cho trang động)
+│   │   ├── distributed-worker.py        # Distributed spider using Scrapy-Redis
+│   │   └── playwright_worker.py         # Spider using Playwright (for JS pages)
 │   │
-│   ├── items.py                         # Định nghĩa Item/Field cho pipeline
-│   ├── pipelines.py                     # Pipeline xử lý, lưu HTML + metadata
-│   └── settings.py                      # Cấu hình Scrapy project
+│   ├── items.py                         # Define item fields for pipeline
+│   ├── pipelines.py                     # Save HTML & metadata to storage/Redis
+│   └── settings.py                      # Core Scrapy configuration
 │
-├── pyproject.toml                       # Cấu hình project và dependencies
-├── scrapy.cfg                           # Entry point Scrapy
-└── README.md                            # Tài liệu dự án
-````
+├── pyproject.toml                       # Project and dependency config
+├── scrapy.cfg                           # Scrapy entry point
+└── README.md                            # Project documentation
+```
 
 ---
 
@@ -92,32 +91,32 @@ vendor_scraper/
 
 ```text
 ┌──────────────────────────┐
-│       URL Producer       │  ← Push URLs to Redis queue
+│       URL Producer       │   ← Push URLs to Redis queue
 │  (add_url_to_pool.py)    │
 └────────────┬─────────────┘
-     │
-     ▼
+             │
+             ▼
 ┌──────────────────────────┐
-│  Redis Queue (url_pools) │  ← Acts as distributed scheduler
+│  Redis Queue (url_pools) │   ← Acts as distributed scheduler
 └────────────┬─────────────┘
-     │
-     ▼
+             │
+             ▼
 ┌──────────────────────────┐
-│  Distributed Workers     │  ← Multiple Scrapy spiders pulling URLs
+│   Distributed Workers    │   ← Multiple Scrapy spiders pulling URLs
 │  (spiders/distributed...)│
 └────────────┬─────────────┘
-     │
-     ▼
+             │
+             ▼
 ┌──────────────────────────┐
-│  Pipelines               │
+│        Pipelines         │
 │  - Clean HTML            │
 │  - Save to storage       │
 │  - Push metadata to Redis│
 └────────────┬─────────────┘
-     │
-     ▼
+             │
+             ▼
 ┌──────────────────────────┐
-│  Database / Data Lake    │  ← Store metadata or final data
+│   Database / Data Lake   │   ← Store metadata or final data
 └──────────────────────────┘
 ```
 
@@ -272,6 +271,6 @@ html_storage/example.com/91e0b1...8f1b.html
 ## 👨‍💻 Authors
 
 **ThanhCD & TienTTM**
-*Data Technician | Data Engineer Pathway*
+*Data Technician | Data Engineer*
 
 ---
