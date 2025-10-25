@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: scraper-project
+Version: 0.1.0
+Summary: An Website Scrapper Project
+Author-email: ThanhCD <cdthanh09@gmail.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: scrapy~=2.9.0
+Requires-Dist: scrapy-redis
+Requires-Dist: psycopg2-binary
+Requires-Dist: Twisted~=22.10.0
+Requires-Dist: python-dotenv
+Requires-Dist: bs4
+Requires-Dist: w3lib
+Requires-Dist: ipython
+Requires-Dist: openpyxl
+Requires-Dist: pandas
+Requires-Dist: scrapy-rotating-proxies
+Requires-Dist: scrapeops-scrapy-proxy-sdk
+Requires-Dist: crawl4ai
+Requires-Dist: playwright
+Requires-Dist: fake-useragent
+Requires-Dist: aiohttp
+Provides-Extra: dev
+Requires-Dist: pre-commit; extra == "dev"

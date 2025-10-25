@@ -1,0 +1,107 @@
+# ==============================
+# pyproject.toml
+# Project: cls-scraper-project
+# Author: ThanhCD
+# Description: A scalable web scraping & data pipeline project
+# ==============================
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+# ------------------------------
+# Project Metadata
+# ------------------------------
+[project]
+name = "cls-scraper-project"
+version = "0.1.0"
+description = "A scalable web scraping and data pipeline project using Scrapy, Redis, and PostgreSQL."
+readme = "README.md"
+authors = [
+    { name = "ThanhCD", email = "cdthanh09@gmail.com" }
+]
+requires-python = ">=3.8"
+
+keywords = ["scrapy", "crawler", "data-pipeline", "redis", "postgres", "ETL", "data-engineering"]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Framework :: Scrapy",
+    "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+# ------------------------------
+# Core Dependencies
+# ------------------------------
+dependencies = [
+    # ---- Crawling Core ----
+    "scrapy ~= 2.9.0",
+    "Twisted ~= 22.10.0",
+    "scrapy-redis",
+    "scrapy-rotating-proxies",
+    "scrapeops-scrapy-proxy-sdk",
+    "fake-useragent",
+    "playwright",
+    "crawl4ai",
+
+    # ---- Parsing & Utilities ----
+    "bs4",
+    "w3lib",
+    "aiohttp",
+    "pandas",
+    "openpyxl",
+    "ipython",
+    "python-dotenv",
+
+    # ---- Database ----
+    "psycopg2-binary"
+]
+
+# ------------------------------
+# Development Dependencies
+# ------------------------------
+[project.optional-dependencies]
+dev = [
+    "pre-commit",
+    "pytest",
+    "black",
+    "flake8",
+    "isort",
+    "mypy"
+]
+
+# ------------------------------
+# CLI entry points (shortcuts for internal scripts)
+# Usage example: `python -m add_url_to_pool`
+# ------------------------------
+[project.scripts]
+add_url_to_pool = "vendor_scraper.dataflow.load.add_url_to_pool:add_url_to_pool"
+load_to_db = "vendor_scraper.dataflow.load.load_metadata_to_db:main"
+#parse_data = "vendor_scraper.pipelines.parse.run_all:main"
+
+# ------------------------------
+# Package Discovery
+# ------------------------------
+[tool.setuptools.packages.find]
+include = ["vendor_scraper*"]
+exclude = ["data*", "html_storage*", "tests*"]
+
+# ------------------------------
+# Formatting / Linting Rules
+# ------------------------------
+[tool.black]
+line-length = 100
+target-version = ['py310']
+skip-string-normalization = true
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 100
+
+[tool.flake8]
+max-line-length = 100
+extend-ignore = ["E203", "W503"]
+

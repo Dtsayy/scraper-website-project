@@ -1,0 +1,12 @@
+pyproject.toml
+cls_scraper_project.egg-info/PKG-INFO
+cls_scraper_project.egg-info/SOURCES.txt
+cls_scraper_project.egg-info/dependency_links.txt
+cls_scraper_project.egg-info/entry_points.txt
+cls_scraper_project.egg-info/requires.txt
+cls_scraper_project.egg-info/top_level.txt
+vendor_scraper/items.py
+vendor_scraper/pipelines.py
+vendor_scraper/settings.py
+vendor_scraper/spiders/distributed-worker.py
+vendor_scraper/spiders/playwright_worker.py

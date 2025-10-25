@@ -1,0 +1,95 @@
+{
+    "website":[
+        {
+            "domain": "novosurgical.com",
+            "url": "https://novosurgical.com/zenith-cushing-bayonet-thumb-forceps-flat-serrated-handles-scraper-end-tissue-forceps-1x2-teeth-7-1-4-inch-18-4-cm-g91838-29.html",
+            "selectors": {
+                "SOURCE_PAGE": "main#maincontent"
+            }
+        },
+        {
+            "domain": "www.bisusa.com",
+            "url": "https://www.bisusa.com/en/products/b0/ptsx103-ptsx-balloon10mmx3cmx80cm.html",
+            "selectors": {
+                "SOURCE_PAGE": "article._article--product"
+            }
+        },
+        {
+            "domain": "eservices.zimviedental.com",
+            "url": "https://eservices.zimviedental.com/product/tapered-screwvent-implants-with-1-mm-machined-collar-mtx-surface-47mmd-10mml/01t5f000003zYukAAE",
+            "selectors": {
+                "SOURCE_PAGE": "div.slds-col .othercontent"
+            }
+        },
+        {
+            "domain": "www.amazon.com",
+            "url": "https://www.amazon.com/Genexa-Artificial-Additives-Children-Reliever/dp/B0DGB739TC",
+            "selectors": {
+                "SOURCE_PAGE": "div.a-container"
+            }
+        },
+        {
+            "domain": "mms.mckesson.com",
+            "url": "https://mms.mckesson.com/product/1000003/Fisher-Anatomical-B1000729FPK",
+            "selectors": {
+                "SOURCE_PAGE": "div.product-detail"
+            }
+        },
+        {
+            "domain": "products.integralife.com",
+            "url": "https://products.integralife.com/primatrix-dermal-repair-scaffold/product/wound-reconstruction-care-outpatient-clinic-private-office-treat-primatrix-dermal-repair-scaffold",
+            "selectors": {
+                "SOURCE_PAGE": "div#main"
+            }
+        },
+        {
+            "domain": "amblersurgical.com",
+            "url": "https://amblersurgical.com/32-342-microsurgical-tissue-forceps-8-1-4-straight-1-0mm-tc-dusted-tips-with-tying-platform-round-counterweight-handle-titanium",
+            "selectors": {
+                "SOURCE_PAGE": "main#maincontent"
+            }
+        },
+        {
+            "domain": "www.grainger.com",
+            "url": "https://www.grainger.com/product/DEWALT-Oscillating-Tool-Kit-0-to-55KE58",
+            "selectors": {
+                "SOURCE_PAGE": "div.B3hFk"
+            }
+        },
+        {
+            "domain": "owens-minor.my.site.com",
+            "url": "https://owens-minor.my.site.com/store/product/07152111pg/01t5f000007keDlAAI",
+            "selectors": {
+                "SOURCE_PAGE": "div.content-container"
+            }
+        },
+        {
+            "domain": "dynarex.com",
+            "url": "https://dynarex.com/products/labchoice/general-supplies/42203-glass-test-tubes",
+            "selectors": {
+                "SOURCE_PAGE": "div.main-container"
+            }
+        },
+        {
+            "domain": "serfinitymedical.com",
+            "url": "https://serfinitymedical.com/products/derma-saver-arm-tube-wrist-to-above-the-elbow",
+            "selectors": {
+                "SOURCE_PAGE": "article.product--outer"
+            }
+        },
+        {
+            "domain": "www.healthcareorigin.com",
+            "url": "https://www.healthcareorigin.com/products/mckesson-gait-belt-mckesson-60-inch-length-white-each-856-ea",
+            "selectors": {
+                "SOURCE_PAGE": "div.product-template__container"
+            }
+        },
+        {
+            "domain": "shop.benco.com",
+            "url": "https://shop.benco.com/Product/6752-525/scanx-duo-touch-cleaning-sheet-pack-of-12",
+            "selectors": {
+                "SOURCE_PAGE": "div.container-fluid"
+            }
+        }
+    ]
+}

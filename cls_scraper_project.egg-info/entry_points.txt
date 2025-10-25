@@ -1,0 +1,2 @@
+[console_scripts]
+addurltopool = vendor_scraper.dataflow.load.add_url_to_pool:add_url_to_pool
